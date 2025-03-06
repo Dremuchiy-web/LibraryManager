@@ -143,5 +143,10 @@ namespace LibraryManagement
             LoadFilters();
             LoadBooks();
         }
+
+        private void BooksDataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

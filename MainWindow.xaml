@@ -10,33 +10,33 @@
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,0,10">
-            <Label Content="Author:" VerticalAlignment="Center" />
+            <Label Content="Автор:" VerticalAlignment="Center" />
             <ComboBox x:Name="AuthorFilterComboBox" Width="150" Margin="5,0"/>
-            <Label Content="Genre:" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <Label Content="Жанр:" VerticalAlignment="Center" Margin="10,0,0,0"/>
             <ComboBox x:Name="GenreFilterComboBox" Width="150" Margin="5,0"/>
-            <Label Content="Search:" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <Label Content="Поиск:" VerticalAlignment="Center" Margin="10,0,0,0"/>
             <TextBox x:Name="SearchTextBox" Width="200" Margin="5,0"/>
-            <Button Content="Filter" Click="FilterButton_Click" Margin="10,0,0,0"/>
+            <Button Content="Фильтровать" Click="FilterButton_Click" Margin="10,0,0,0"/>
         </StackPanel>
 
-        <DataGrid x:Name="BooksDataGrid" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single">
+        <DataGrid x:Name="BooksDataGrid" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" SelectionChanged="BooksDataGrid_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="Auto"/>
-                <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"/>
-                <DataGridTextColumn Header="Author" Binding="{Binding AuthorName}" Width="*"/>
-                <DataGridTextColumn Header="Year" Binding="{Binding PublishYear}" Width="Auto"/>
+                <DataGridTextColumn Header="Название" Binding="{Binding Title}" Width="*"/>
+                <DataGridTextColumn Header="Автор" Binding="{Binding AuthorName}" Width="*"/>
+                <DataGridTextColumn Header="Год" Binding="{Binding PublishYear}" Width="Auto"/>
                 <DataGridTextColumn Header="ISBN" Binding="{Binding ISBN}" Width="*"/>
-                <DataGridTextColumn Header="Genre" Binding="{Binding GenreName}" Width="*"/>
-                <DataGridTextColumn Header="Stock" Binding="{Binding QuantityInStock}" Width="Auto"/>
+                <DataGridTextColumn Header="Жанр" Binding="{Binding GenreName}" Width="*"/>
+                <DataGridTextColumn Header="Тираж" Binding="{Binding QuantityInStock}" Width="60"/>
             </DataGrid.Columns>
         </DataGrid>
 
         <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Right" Margin="0,10,0,0">
-            <Button Content="Add Book" Click="AddBookButton_Click" Width="100" Margin="5"/>
-            <Button Content="Edit Book" Click="EditBookButton_Click" Width="100" Margin="5"/>
-            <Button Content="Delete Book" Click="DeleteBookButton_Click" Width="100" Margin="5"/>
-            <Button Content="Manage Authors" Click="ManageAuthorsButton_Click" Width="120" Margin="5"/>
-            <Button Content="Manage Genres" Click="ManageGenresButton_Click" Width="120" Margin="5"/>
+            <Button Content="Добавить книгу" Click="AddBookButton_Click" Width="110"/>
+            <Button Content="Редактировать книгу" Click="EditBookButton_Click" Width="121" Margin="5"/>
+            <Button Content="Удалить книгу" Click="DeleteBookButton_Click" Width="100" Margin="5"/>
+            <Button Content="Редактировать авторов" Click="ManageAuthorsButton_Click" Width="144" Margin="5"/>
+            <Button Content="Редактировать жанры" Click="ManageGenresButton_Click" Width="138" Margin="5"/>
         </StackPanel>
     </Grid>
 </Window>

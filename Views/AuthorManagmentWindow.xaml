@@ -11,18 +11,18 @@
         <DataGrid x:Name="AuthorsDataGrid" Grid.Row="0" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="Auto"/>
-                <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}" Width="*"/>
-                <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}" Width="*"/>
-                <DataGridTextColumn Header="Birth Date" Binding="{Binding BirthDate}" Width="*"/>
-                <DataGridTextColumn Header="Country" Binding="{Binding Country}" Width="*"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}" Width="*"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}" Width="*"/>
+                <DataGridTextColumn Header="Дата рождения" Binding="{Binding BirthDate}" Width="*"/>
+                <DataGridTextColumn Header="Страна" Binding="{Binding Country}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
-            <Button Content="Add" Width="80" Margin="5" Click="AddButton_Click"/>
-            <Button Content="Edit" Width="80" Margin="5" Click="EditButton_Click"/>
-            <Button Content="Delete" Width="80" Margin="5" Click="DeleteButton_Click"/>
-            <Button Content="Close" Width="80" Margin="5" Click="CloseButton_Click"/>
+            <Button Content="Добавить" Width="80" Margin="5" Click="AddButton_Click"/>
+            <Button Content="Изменить" Width="80" Margin="5" Click="EditButton_Click"/>
+            <Button Content="Удалить" Width="80" Margin="5" Click="DeleteButton_Click"/>
+            <Button Content="Закрыть" Width="80" Margin="5" Click="CloseButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>
